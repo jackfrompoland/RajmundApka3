@@ -44,6 +44,8 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
+        alert("BBB");
+
         document.getElementById("#przycisk").click(function () {
             //navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
             alert("AAA");
