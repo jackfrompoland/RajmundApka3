@@ -53,8 +53,8 @@ var app = {
     },
     foo: function()
     {
-        alert("AAA");
-        //navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
+        //alert("AAA");
+        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
     },
     onSuccess: function (position) {
         alert('Latitude: ' + position.coords.latitude + '\n' +
