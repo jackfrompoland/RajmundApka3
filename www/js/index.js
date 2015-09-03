@@ -47,11 +47,9 @@ var app = {
         alert("BBB");
 
         //document.getElementById("przycisk").onclick(app.foo());
-        window.addEventListener("batterystatus", app.onBatteryStatus, false);
-
-
-
         $("#przycisk").on("click", app.foo);
+
+        window.addEventListener("batterystatus", app.onBatteryStatus, false);
 
         console.log('Received Event: ' + id);
     },
