@@ -46,12 +46,14 @@ var app = {
 
         alert("BBB");
 
-        document.getElementById("przycisk").click(function () {
-            //navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
-            alert("AAA");
-        });
+        document.getElementById("przycisk").click(foo());
 
         console.log('Received Event: ' + id);
+    },
+    foo: function()
+    {
+        alert("AAA");
+        //navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
     },
     onSuccess: function (position) {
         alert('Latitude: ' + position.coords.latitude + '\n' +
