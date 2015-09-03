@@ -46,7 +46,7 @@ var app = {
 
         alert("BBB");
 
-        document.getElementById("#przycisk").click(function () {
+        document.getElementById("przycisk").click(function () {
             //navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
             alert("AAA");
         });
