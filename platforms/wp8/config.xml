@@ -15,7 +15,4 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <feature name="Battery">
-        <param name="wp-package" value="Battery" />
-    </feature>
 </widget>
