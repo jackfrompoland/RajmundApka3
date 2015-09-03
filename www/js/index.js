@@ -45,7 +45,8 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         document.getElementById("#przycisk").click(function () {
-            navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
+            //navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
+            alert("AAA");
         });
 
         console.log('Received Event: ' + id);
