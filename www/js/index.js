@@ -46,7 +46,8 @@ var app = {
 
         alert("BBB");
 
-        document.getElementById("przycisk").click(app.foo());
+        //document.getElementById("przycisk").onclick(app.foo());
+        $("#przycisk").onclick(app.foo);
 
         console.log('Received Event: ' + id);
     },
