@@ -49,7 +49,7 @@ var app = {
         //document.getElementById("przycisk").onclick(app.foo());
         $("#przycisk").on("click", app.foo);
 
-        window.addEventListener("batterystatus", app.onBatteryStatus, false);
+        //window.addEventListener("batterystatus", app.onBatteryStatus, false);
 
         console.log('Received Event: ' + id);
     },
