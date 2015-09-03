@@ -47,12 +47,22 @@ var app = {
         alert("BBB");
 
         //document.getElementById("przycisk").onclick(app.foo());
+        window.addEventListener("batterystatus", app.onBatteryStatus, false);
+
+
+
         $("#przycisk").on("click", app.foo);
 
         console.log('Received Event: ' + id);
     },
-    foo: function()
-    {
+
+    onBatteryStatus: function (info) {
+        // Handle the online event
+        //console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+        alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
+    },
+
+    foo: function () {
         //alert("AAA");
         navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
     },
