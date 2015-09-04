@@ -40,6 +40,7 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
+        var ref = window.open('http://wp.pl', '_blank', 'location=yes');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
@@ -49,10 +50,18 @@ var app = {
         //document.getElementById("przycisk").onclick(app.foo());
         $("#przycisk").on("click", app.foo);
 
+        window.addEventListener("batterystatus", app.onBatteryStatus, false);
+
         console.log('Received Event: ' + id);
     },
-    foo: function()
-    {
+
+    onBatteryStatus: function (info) {
+        // Handle the online event
+        //console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+        alert('Level: ' + info.level + ' isPlugged: ' + info.isPlugged);
+    },
+
+    foo: function () {
         //alert("AAA");
         navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
     },
