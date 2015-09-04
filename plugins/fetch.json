@@ -30,5 +30,11 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "com.initialxy.cordova.themeablebrowser": {
+        "source": {
+            "type": "registry",
+            "id": "com.initialxy.cordova.themeablebrowser"
+        }
     }
 }

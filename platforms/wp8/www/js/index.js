@@ -40,15 +40,15 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
-        var ref = window.open('http://wp.pl', '_blank', 'location=yes');
+
+        //to otwiera okienko przegladarki InnAppBrowser
+        //var ref = window.open('http://wp.pl', '_blank', 'location=no');
+        var ref = window.open('http://parkujprzymoimdomu.pl', '_blank', 'location=no');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        alert("BBB");
-
-        //document.getElementById("przycisk").onclick(app.foo());
-        $("#przycisk").on("click", app.foo);
+        $("#przycisk").on("click", app.geolokacja);
 
         window.addEventListener("batterystatus", app.onBatteryStatus, false);
 
@@ -61,8 +61,7 @@ var app = {
         alert('Level: ' + info.level + ' isPlugged: ' + info.isPlugged);
     },
 
-    foo: function () {
-        //alert("AAA");
+    geolokacja: function () {
         navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
     },
     onSuccess: function (position) {

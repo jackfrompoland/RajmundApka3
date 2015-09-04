@@ -47,6 +47,9 @@
         },
         "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "{c70644c0-527b-11e5-893b-ed375d180046}"
+        },
+        "com.initialxy.cordova.themeablebrowser": {
+            "PACKAGE_NAME": "{c70644c0-527b-11e5-893b-ed375d180046}"
         }
     },
     "dependent_plugins": {}
